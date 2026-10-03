@@ -1,0 +1,376 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --purple: #b9a3dc;
+  --dark-purple: #5d477d;
+  --lavender: #eee7f8;
+  --light: #faf8fc;
+  --pink: #e8b8c8;
+  --text: #4f4658;
+  --white: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--light);
+  color: var(--text);
+  font-family: "DM Sans", sans-serif;
+  line-height: 1.7;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(232,184,200,.35), transparent 25%),
+    radial-gradient(circle at 85% 80%, rgba(185,163,220,.45), transparent 30%),
+    linear-gradient(135deg, #f7f2fc, #e9def5);
+}
+
+.hero-content {
+  width: min(850px, 90%);
+  position: relative;
+  z-index: 2;
+}
+
+.eyebrow,
+.section-tag {
+  color: var(--dark-purple);
+  letter-spacing: 4px;
+  font-size: .75rem;
+  font-weight: 600;
+}
+
+.small-title {
+  margin-top: 25px;
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+  color: var(--dark-purple);
+}
+
+.hero h1 {
+  font-size: clamp(5rem, 16vw, 10rem);
+  line-height: .95;
+  margin: 10px 0;
+}
+
+.hero h2 {
+  font-size: clamp(1.7rem, 4vw, 3rem);
+  font-weight: 500;
+}
+
+.intro {
+  max-width: 550px;
+  margin: 20px auto 30px;
+}
+
+.main-button,
+.wish-button {
+  border: none;
+  background: var(--dark-purple);
+  color: white;
+  padding: 14px 28px;
+  border-radius: 40px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: .3s ease;
+  box-shadow: 0 10px 25px rgba(93,71,125,.2);
+}
+
+.main-button:hover,
+.wish-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(93,71,125,.3);
+}
+
+.flower {
+  position: absolute;
+  color: var(--pink);
+  font-size: 6rem;
+  opacity: .35;
+}
+
+.flower-one {
+  top: 10%;
+  left: 8%;
+}
+
+.flower-two {
+  bottom: 10%;
+  right: 8%;
+}
+
+section {
+  padding: 100px 8%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.birthday-grid,
+.memory-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+  margin-top: 35px;
+}
+
+.photo-frame {
+  background: white;
+  padding: 15px 15px 50px;
+  box-shadow: 0 20px 45px rgba(93,71,125,.12);
+  transform: rotate(-2deg);
+  position: relative;
+}
+
+.photo-frame img,
+.memory-photo img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.photo-frame img {
+  height: 560px;
+}
+
+.photo-caption {
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  color: var(--dark-purple);
+}
+
+.script {
+  color: #a078a8;
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 1.3rem;
+}
+
+.birthday-text h2 {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 1.1;
+  margin: 10px 0 25px;
+}
+
+.birthday-text p:not(.script) {
+  margin-bottom: 20px;
+}
+
+.mini-note {
+  margin-top: 30px;
+  color: #9b7da8;
+  font-size: .9rem;
+}
+
+.letter-section {
+  background: #eee7f8;
+  max-width: none;
+}
+
+.letter-card {
+  max-width: 750px;
+  margin: 35px auto 0;
+  background: white;
+  padding: 55px;
+  position: relative;
+  box-shadow: 0 20px 50px rgba(93,71,125,.1);
+  border-radius: 4px;
+}
+
+.letter-card p {
+  margin: 18px 0;
+}
+
+.letter-flower {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 2.5rem;
+}
+
+.letter-ending {
+  font-family: "Playfair Display", serif;
+  color: var(--dark-purple);
+  font-size: 1.3rem;
+}
+
+.memory-photo {
+  padding: 12px;
+  background: white;
+  box-shadow: 0 15px 35px rgba(93,71,125,.12);
+  transform: rotate(2deg);
+}
+
+.memory-copy h3 {
+  font-size: 2.5rem;
+  margin: 10px 0;
+}
+
+.flower-line {
+  letter-spacing: 5px;
+}
+
+.wishes-section {
+  text-align: center;
+}
+
+.wishes-section h2 {
+  font-size: 3rem;
+  margin: 10px 0 45px;
+}
+
+.wish-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.wish-card {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(93,71,125,.08);
+  transition: .3s ease;
+}
+
+.wish-card:hover {
+  transform: translateY(-7px);
+}
+
+.wish-card span {
+  font-size: 1.8rem;
+  color: #b889a0;
+}
+
+.wish-card h3 {
+  margin: 10px 0;
+  font-size: 1.4rem;
+}
+
+.final-section {
+  max-width: none;
+  text-align: center;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(232,184,200,.3), transparent 25%),
+    linear-gradient(135deg, #e9def5, #f8eef5);
+}
+
+.final-flower {
+  font-size: 3rem;
+}
+
+.final-section h2 {
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  margin: 10px 0 20px;
+}
+
+.wish-button {
+  margin-top: 25px;
+}
+
+.wish-message {
+  display: none;
+  margin-top: 35px;
+  font-family: "Playfair Display", serif;
+  color: var(--dark-purple);
+  font-size: clamp(1.7rem, 5vw, 3rem);
+  animation: pop .8s ease;
+}
+
+footer {
+  padding: 25px;
+  text-align: center;
+  color: #8c7c98;
+  font-size: .85rem;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: opacity .8s ease, transform .8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sparkle {
+  position: fixed;
+  pointer-events: none;
+  z-index: 100;
+  animation: sparkle-fall 1.8s ease-out forwards;
+}
+
+@keyframes sparkle-fall {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100px) scale(.2) rotate(180deg);
+  }
+}
+
+@keyframes pop {
+  0% { opacity: 0; transform: scale(.7); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@media (max-width: 800px) {
+  .birthday-grid,
+  .memory-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .wish-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .photo-frame img {
+    height: auto;
+  }
+
+  .letter-card {
+    padding: 35px 25px;
+  }
+}
+
+@media (max-width: 500px) {
+  section {
+    padding: 70px 6%;
+  }
+
+  .wish-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 5rem;
+  }
+}
